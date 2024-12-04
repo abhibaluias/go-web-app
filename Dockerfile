@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o main
+RUN go build -o main .
 
 #Final stage -Distroless image
 FROM gcr.io/distroless/base
