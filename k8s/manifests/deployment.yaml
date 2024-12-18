@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: abiramidoc/go-web-app:v1
+        image: abiramidoc/go-web-app
         ports:
         - containerPort: 8080
