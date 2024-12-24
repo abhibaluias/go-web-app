@@ -75,11 +75,6 @@ jobs:
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
     needs: push
 
     steps:
@@ -90,11 +85,7 @@ jobs:
 
     - name: Update tag in Helm chart
       run: |
-<<<<<<< HEAD
               sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-app-chart/values.yaml
-=======
-        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-app-chart/values.yaml
->>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
 
     - name: Commit and push changes
       run: |
