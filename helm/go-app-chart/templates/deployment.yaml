@@ -1,4 +1,4 @@
-jj# This is a sample deployment manifest file for a simple web application.
+# This is a sample deployment manifest file for a simple web application.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: abiramidoc/go-web-app:{{ .Values.image.tag }}
+        image: abiramidco/go-web-app
         ports:
         - containerPort: 8080
