@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# CICD using GitHub actions
+
+>>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
 name: CI/CD
 
 # Exclude the workflow to run on changes to the helm chart
@@ -70,7 +75,11 @@ jobs:
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
     needs: push
 
     steps:
@@ -81,12 +90,20 @@ jobs:
 
     - name: Update tag in Helm chart
       run: |
+<<<<<<< HEAD
               sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-web-app-chart/values.yaml
+=======
+        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-app-chart/values.yaml
+>>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
 
     - name: Commit and push changes
       run: |
         git config --global user.email "abhibaluias@gmail.com"
         git config --global user.name "abhibaluias"
+<<<<<<< HEAD
         git add helm/go-web-app-chart/values.yaml
+=======
+        git add helm/go-app-chart/values.yaml
+>>>>>>> 07dd2816d2ae3b6f071971eff96241d271652b16
         git commit -m "Update tag in Helm chart"
         git push
