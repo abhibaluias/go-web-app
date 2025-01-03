@@ -8,7 +8,7 @@ replicaCount: 1
 image:
   repository: abhibaluias/go-web-app
   pullPolicy: IfNotPresent
-  tag: "12478192433"
+  tag: "12594922300"
 
 ingress:
   enabled: false
