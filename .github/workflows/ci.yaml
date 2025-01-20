@@ -1,4 +1,3 @@
-
 # CICD using GitHub actions
 
 name: CI/CD
@@ -45,7 +44,7 @@ jobs:
       with:
         version: v1.56.2
   
-  push:cd 
+  push:
     runs-on: ubuntu-latest
 
     needs: build
